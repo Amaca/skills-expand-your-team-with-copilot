@@ -1,0 +1,141 @@
+name: ✏️ Modify Existing Activity
+description: Request changes to an existing extracurricular activity
+title: "[MODIFY ACTIVITY]: "
+labels: ["enhancement", "activity-modification"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Need to update an existing activity? Please provide the details of what needs to be changed.
+
+  - type: dropdown
+    id: activity-to-modify
+    attributes:
+      label: Which activity needs to be modified?
+      options:
+        - Art Club
+        - Basketball Team
+        - Chess Club
+        - Debate Team
+        - Drama Club
+        - Math Club
+        - Morning Fitness
+        - Programming Class
+        - Science Club
+        - Soccer Team
+        - Volleyball Team
+        - Saturday Chess Tournament
+        - Sunday Chess Tournament
+        - Manga Maniacs
+        - Other (please specify in details)
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: what-to-change
+    attributes:
+      label: What needs to be changed?
+      description: Select all that apply
+      options:
+        - label: Activity name
+        - label: Activity description
+        - label: Schedule (days and/or times)
+        - label: Maximum number of participants
+        - label: Remove the activity entirely
+        - label: Other changes (explain in details below)
+
+  - type: input
+    id: new-name
+    attributes:
+      label: New Activity Name (if changing name)
+      description: What should the new name be?
+      placeholder: e.g., "Advanced Chess Club"
+
+  - type: textarea
+    id: new-description
+    attributes:
+      label: New Activity Description (if changing description)
+      description: What should the new description be?
+      placeholder: e.g., "Advanced chess strategies and tournament preparation for experienced players"
+
+  - type: dropdown
+    id: new-days
+    attributes:
+      label: New Days (if changing schedule)
+      description: Which days should this activity run?
+      multiple: true
+      options:
+        - Monday
+        - Tuesday
+        - Wednesday
+        - Thursday
+        - Friday
+        - Saturday
+        - Sunday
+
+  - type: input
+    id: new-start-time
+    attributes:
+      label: New Start Time (if changing schedule)
+      description: What time should the activity start? (Use 24-hour format)
+      placeholder: e.g., "15:30" for 3:30 PM, "07:00" for 7:00 AM
+
+  - type: input
+    id: new-end-time
+    attributes:
+      label: New End Time (if changing schedule)
+      description: What time should the activity end? (Use 24-hour format)
+      placeholder: e.g., "17:00" for 5:00 PM, "08:30" for 8:30 AM
+
+  - type: input
+    id: new-max-participants
+    attributes:
+      label: New Maximum Participants (if changing capacity)
+      description: How many students should be able to participate?
+      placeholder: e.g., "25"
+
+  - type: textarea
+    id: reason-for-change
+    attributes:
+      label: Reason for Change
+      description: Why does this activity need to be modified?
+      placeholder: e.g., "More students interested than expected", "Teacher schedule conflict", "Need to accommodate equipment limitations"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: current-participants
+    attributes:
+      label: What should happen to currently registered students?
+      options:
+        - Keep all current registrations (if possible with new capacity)
+        - Remove all current registrations and let students re-register
+        - Move students to a different activity (specify which one in details)
+        - Other (explain in additional details)
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional-details
+    attributes:
+      label: Additional Details
+      description: Any other important information about this change
+      placeholder: e.g., "This change should take effect starting next Monday", "Need to notify parents about the schedule change"
+
+  - type: checkboxes
+    id: acceptance-criteria
+    attributes:
+      label: What should be working when this is complete?
+      description: How will we know the changes were successful?
+      options:
+        - label: Activity information is updated correctly on the website
+          required: true
+        - label: Students can still register/unregister appropriately
+          required: true
+        - label: Existing student registrations are handled as specified
+          required: true
+        - label: Teachers can still manage the activity
+          required: true
+        - label: All schedule and capacity limits work correctly
+          required: true

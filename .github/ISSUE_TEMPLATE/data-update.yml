@@ -1,0 +1,149 @@
+name: 📝 Data Update Request
+description: Request updates to student lists, teacher accounts, or other data
+title: "[DATA UPDATE]: "
+labels: ["data-update", "maintenance"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Need to update student registrations, teacher accounts, or other data in the system? Please provide the specific details below.
+
+  - type: dropdown
+    id: update-type
+    attributes:
+      label: What type of data needs to be updated?
+      options:
+        - Student activity registrations
+        - Teacher account information
+        - Activity participant lists
+        - Student email addresses
+        - Teacher login credentials
+        - Multiple registrations (bulk update)
+        - Other (please specify in details)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: specific-activity
+    attributes:
+      label: Which activity is affected? (if applicable)
+      options:
+        - Not applicable - this is not activity-specific
+        - Art Club
+        - Basketball Team
+        - Chess Club
+        - Debate Team
+        - Drama Club
+        - Math Club
+        - Morning Fitness
+        - Programming Class
+        - Science Club
+        - Soccer Team
+        - Volleyball Team
+        - Saturday Chess Tournament
+        - Sunday Chess Tournament
+        - Manga Maniacs
+        - Multiple activities (specify in details)
+
+  - type: textarea
+    id: current-data
+    attributes:
+      label: What is the current incorrect data?
+      description: Specify exactly what is currently in the system that needs to be changed
+      placeholder: |
+        e.g., 
+        - "john@mergington.edu is registered for Math Club but should not be"
+        - "Teacher mrodriguez password needs to be reset"
+        - "Basketball Team shows 25 max participants but should be 22"
+    validations:
+      required: true
+
+  - type: textarea
+    id: desired-data
+    attributes:
+      label: What should the data be changed to?
+      description: Specify exactly what the data should look like after the update
+      placeholder: |
+        e.g.,
+        - "Remove john@mergington.edu from Math Club participants"
+        - "Reset mrodriguez password to 'newart123'"
+        - "Change Basketball Team max participants to 22"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: urgency
+    attributes:
+      label: How urgent is this data update?
+      options:
+        - Low - Can be done anytime this week
+        - Medium - Should be done within 1-2 days
+        - High - Needs to be done today
+        - Critical - Urgent, affecting current operations
+    validations:
+      required: true
+
+  - type: textarea
+    id: reason-for-change
+    attributes:
+      label: Reason for Change
+      description: Why does this data need to be updated?
+      placeholder: e.g., "Student transferred to different school", "Teacher forgot password", "Activity capacity changed due to room availability"
+    validations:
+      required: true
+
+  - type: input
+    id: requesting-teacher
+    attributes:
+      label: Requesting Teacher
+      description: Which teacher is requesting this change?
+      placeholder: e.g., "Ms. Rodriguez", "Principal Martinez"
+    validations:
+      required: true
+
+  - type: textarea
+    id: student-emails
+    attributes:
+      label: Student Email Addresses (if applicable)
+      description: List specific student email addresses that need to be updated
+      placeholder: |
+        e.g.,
+        john@mergington.edu
+        jane@mergington.edu
+        mike@mergington.edu
+
+  - type: textarea
+    id: verification-method
+    attributes:
+      label: How can we verify this change is correct?
+      description: How should we confirm this update is accurate?
+      placeholder: e.g., "Check with Principal Martinez", "Student provided written request", "Parent called to confirm"
+
+  - type: checkboxes
+    id: data-backup
+    attributes:
+      label: Data Safety Acknowledgment
+      description: Important considerations for data updates
+      options:
+        - label: I understand that data changes may be difficult to reverse
+          required: true
+        - label: I have verified this information is accurate
+          required: true
+        - label: I have appropriate authorization to request this change
+          required: true
+
+  - type: checkboxes
+    id: acceptance-criteria
+    attributes:
+      label: How will we know this update is complete?
+      description: What should be correct when this data update is finished?
+      options:
+        - label: The specified data is updated correctly in the system
+          required: true
+        - label: All affected users can access/use the system normally
+          required: true
+        - label: No unintended changes were made to other data
+          required: true
+        - label: The changes are reflected correctly on the website
+          required: true

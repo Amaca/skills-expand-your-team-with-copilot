@@ -1,0 +1,117 @@
+name: 🎨 Website Improvement
+description: Request improvements to the website appearance or user experience
+title: "[UI/UX]: "
+labels: ["enhancement", "ui-ux"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Have an idea to make the website better for students and teachers? Let us know what you'd like to see improved!
+
+  - type: dropdown
+    id: improvement-area
+    attributes:
+      label: Which area of the website needs improvement?
+      options:
+        - Overall website design/appearance
+        - Activities list display
+        - Student registration process
+        - Teacher login process
+        - Activity filtering and search
+        - Mobile/tablet viewing experience
+        - Navigation and menus
+        - Colors and visual design
+        - Text and fonts
+        - Error messages and notifications
+        - Other (please specify in details)
+    validations:
+      required: true
+
+  - type: textarea
+    id: current-problem
+    attributes:
+      label: What's the current problem or limitation?
+      description: Describe what's currently difficult, confusing, or not working well
+      placeholder: e.g., "The activities list is hard to read because the text is too small", "Students get confused about how to register"
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed-solution
+    attributes:
+      label: What would you like to see instead?
+      description: Describe your ideal solution or improvement
+      placeholder: e.g., "Make the activity cards bigger with larger text", "Add a help button that shows registration instructions"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: who-benefits
+    attributes:
+      label: Who would benefit from this improvement?
+      multiple: true
+      options:
+        - Students registering for activities
+        - Teachers managing registrations
+        - Parents viewing activity information
+        - School administrators
+        - Everyone using the website
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: How important is this improvement?
+      options:
+        - Low - Nice to have, but not urgent
+        - Medium - Would make things noticeably better
+        - High - Really needed to improve usability
+        - Critical - Current design is causing serious problems
+    validations:
+      required: true
+
+  - type: textarea
+    id: examples-inspiration
+    attributes:
+      label: Examples or Inspiration
+      description: Do you have examples of other websites or specific ideas that inspired this request?
+      placeholder: e.g., "The school district's main website has a good layout", "Like how [other website] handles their signup process"
+
+  - type: dropdown
+    id: device-usage
+    attributes:
+      label: What devices are primarily used to access the website?
+      description: This helps us prioritize the most important viewing experiences
+      multiple: true
+      options:
+        - Desktop computers (school computer lab)
+        - Laptops
+        - Tablets (iPads, etc.)
+        - Smartphones
+        - Not sure
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Any other details that would help us understand and implement this improvement
+      placeholder: e.g., "This would help during busy registration periods", "Several students have mentioned this issue"
+
+  - type: checkboxes
+    id: acceptance-criteria
+    attributes:
+      label: How will we know this improvement is successful?
+      description: What should be better when this is implemented?
+      options:
+        - label: The identified problem is resolved
+          required: true
+        - label: The website is easier to use for the target audience
+          required: true
+        - label: The improvement works well on all relevant devices
+          required: true
+        - label: Existing functionality continues to work correctly
+          required: true
+        - label: The change follows good web design principles
+          required: true

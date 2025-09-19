@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 💡 General Questions or Discussion
+    url: https://github.com/Amaca/skills-expand-your-team-with-copilot/discussions
+    about: For general questions, ideas, or discussions about the system
+  - name: 📚 Development Documentation
+    url: https://github.com/Amaca/skills-expand-your-team-with-copilot/blob/main/docs/how-to-develop.md
+    about: Technical documentation for developers working on the system
+  - name: 🆘 Emergency Support
+    url: mailto:it-support@mergington.edu
+    about: For urgent issues that need immediate attention (email IT support)
