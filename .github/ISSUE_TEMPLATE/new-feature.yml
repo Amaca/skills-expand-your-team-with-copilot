@@ -1,0 +1,137 @@
+name: ✨ New Feature Request
+description: Request a new feature or capability for the system
+title: "[FEATURE]: "
+labels: ["enhancement", "new-feature"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Have an idea for a new feature that would make the system more useful? We'd love to hear about it!
+
+  - type: textarea
+    id: feature-description
+    attributes:
+      label: Feature Description
+      description: What new feature would you like to see added?
+      placeholder: e.g., "Email notifications when students register", "Calendar view of all activities", "Export student lists to Excel"
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem-solved
+    attributes:
+      label: What problem would this solve?
+      description: Explain the current challenge or limitation this feature would address
+      placeholder: e.g., "Teachers currently have to manually check the website to see new registrations", "Hard to see schedule conflicts between activities"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: feature-category
+    attributes:
+      label: What type of feature is this?
+      options:
+        - Communication/Notifications
+        - Reporting/Data Export
+        - Schedule Management
+        - Student Management
+        - Teacher Tools
+        - Website Navigation
+        - Data Import/Integration
+        - Security/Access Control
+        - Other (please specify in details)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: primary-users
+    attributes:
+      label: Who would primarily use this feature?
+      multiple: true
+      options:
+        - Teachers managing activities
+        - School administrators
+        - Students and families
+        - IT staff
+        - Everyone
+    validations:
+      required: true
+
+  - type: textarea
+    id: how-it-works
+    attributes:
+      label: How should this feature work?
+      description: Describe the step-by-step process of how users would interact with this feature
+      placeholder: |
+        1. Teacher goes to the activity management page
+        2. Clicks "Send Notification" button
+        3. Selects which students to notify
+        4. Types a message
+        5. Clicks "Send" and emails are automatically sent
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: How important is this feature?
+      options:
+        - Low - Nice to have in the future
+        - Medium - Would be helpful to add soon
+        - High - Important for improving daily operations
+        - Critical - Essential for the system to be fully functional
+    validations:
+      required: true
+
+  - type: textarea
+    id: integration-requirements
+    attributes:
+      label: Integration Requirements
+      description: Does this feature need to work with other systems or tools?
+      placeholder: e.g., "Should integrate with school email system", "Needs to export data compatible with Excel", "Should work with existing student information system"
+
+  - type: textarea
+    id: example-scenarios
+    attributes:
+      label: Example Use Cases
+      description: Provide specific examples of when and how this feature would be used
+      placeholder: |
+        - Ms. Rodriguez wants to notify all Art Club members about a field trip
+        - Principal needs a report of all activities with low enrollment
+        - Parents want to see their child's activity schedule on their phone
+
+  - type: dropdown
+    id: complexity-estimate
+    attributes:
+      label: How complex do you think this feature is to implement?
+      description: This helps us plan development time
+      options:
+        - Simple - Probably a small change to existing functionality
+        - Moderate - Might require new pages or significant changes
+        - Complex - Likely requires major development work
+        - Not sure - Let the developers assess
+
+  - type: textarea
+    id: alternatives-considered
+    attributes:
+      label: Alternative Solutions
+      description: Are there other ways to solve this problem that you've considered?
+      placeholder: e.g., "Could manually send emails, but that's time-consuming", "Could use a separate system, but integration would be difficult"
+
+  - type: checkboxes
+    id: acceptance-criteria
+    attributes:
+      label: What should be working when this feature is complete?
+      description: How will we know this feature is successfully implemented?
+      options:
+        - label: The feature works as described for the intended users
+          required: true
+        - label: The feature integrates well with existing functionality
+          required: true
+        - label: The feature is intuitive and easy to use
+          required: true
+        - label: The feature doesn't break any existing capabilities
+          required: true
+        - label: Appropriate users have access to the feature
+          required: true

@@ -1,0 +1,129 @@
+name: 🐛 Bug Report
+description: Report a problem or error in the system
+title: "[BUG]: "
+labels: ["bug"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for reporting a bug! Please provide detailed information to help us identify and fix the issue quickly.
+
+  - type: textarea
+    id: problem-description
+    attributes:
+      label: What's the problem?
+      description: Clearly describe what's not working correctly
+      placeholder: e.g., "Students cannot sign up for Basketball Team - the signup button doesn't work"
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: Steps to reproduce the problem
+      description: Tell us exactly what you did when the problem occurred
+      placeholder: |
+        1. Go to the activities page
+        2. Click on 'Basketball Team'
+        3. Click 'Register' button
+        4. Enter student email
+        5. Click 'Register' button
+        6. Error message appears
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: What should happen instead?
+      description: Describe what you expected to happen
+      placeholder: e.g., "The student should be successfully registered for the activity"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: affected-area
+    attributes:
+      label: Which part of the system is affected?
+      options:
+        - Student registration/signup
+        - Activity display/listing
+        - Teacher login
+        - Student unregistration
+        - Activity filtering (by day/time)
+        - General website navigation
+        - Other (please specify in additional details)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: affected-activities
+    attributes:
+      label: Which activities are affected? (if applicable)
+      multiple: true
+      options:
+        - All activities
+        - Art Club
+        - Basketball Team
+        - Chess Club
+        - Debate Team
+        - Drama Club
+        - Math Club
+        - Morning Fitness
+        - Programming Class
+        - Science Club
+        - Soccer Team
+        - Volleyball Team
+        - Saturday Chess Tournament
+        - Sunday Chess Tournament
+        - Manga Maniacs
+        - Other (please specify)
+
+  - type: dropdown
+    id: urgency
+    attributes:
+      label: How urgent is this issue?
+      options:
+        - Low - Minor inconvenience, workaround available
+        - Medium - Affects some functionality but system still usable
+        - High - Major functionality broken, significantly impacts daily operations
+        - Critical - System completely unusable or causes data loss
+    validations:
+      required: true
+
+  - type: textarea
+    id: error-messages
+    attributes:
+      label: Error Messages
+      description: Copy and paste any error messages you see
+      placeholder: e.g., "Error 400: Already signed up for this activity"
+
+  - type: input
+    id: teacher-account
+    attributes:
+      label: Teacher Account Used (if applicable)
+      description: Which teacher account were you using when the problem occurred?
+      placeholder: e.g., "mrodriguez", "mchen", "principal"
+
+  - type: textarea
+    id: additional-details
+    attributes:
+      label: Additional Details
+      description: Any other information that might help us fix this issue
+      placeholder: e.g., "This only happens on certain days", "Problem started after the last update"
+
+  - type: checkboxes
+    id: acceptance-criteria
+    attributes:
+      label: How will we know this is fixed?
+      description: What should work correctly when this bug is resolved?
+      options:
+        - label: The reported problem no longer occurs
+          required: true
+        - label: The system behaves as expected in the described scenario
+          required: true
+        - label: No error messages appear during normal operation
+          required: true
+        - label: All related functionality works correctly
+          required: true
