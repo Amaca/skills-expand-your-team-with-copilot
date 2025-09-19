@@ -14,7 +14,7 @@ body:
     attributes:
       label: Feature Description
       description: What new feature would you like to see added?
-      placeholder: e.g., "Email notifications when students register", "Calendar view of all activities", "Export student lists to Excel"
+      placeholder: 'e.g., "Email notifications when students register", "Calendar view of all activities", "Export student lists to Excel'
     validations:
       required: true
 
@@ -23,7 +23,7 @@ body:
     attributes:
       label: What problem would this solve?
       description: Explain the current challenge or limitation this feature would address
-      placeholder: e.g., "Teachers currently have to manually check the website to see new registrations", "Hard to see schedule conflicts between activities"
+      placeholder: 'e.g., "Teachers currently have to manually check the website to see new registrations", "Hard to see schedule conflicts between activities'
     validations:
       required: true
 
@@ -89,7 +89,7 @@ body:
     attributes:
       label: Integration Requirements
       description: Does this feature need to work with other systems or tools?
-      placeholder: e.g., "Should integrate with school email system", "Needs to export data compatible with Excel", "Should work with existing student information system"
+      placeholder: 'e.g., "Should integrate with school email system", "Needs to export data compatible with Excel", "Should work with existing student information system'
 
   - type: textarea
     id: example-scenarios
@@ -117,7 +117,7 @@ body:
     attributes:
       label: Alternative Solutions
       description: Are there other ways to solve this problem that you've considered?
-      placeholder: e.g., "Could manually send emails, but that's time-consuming", "Could use a separate system, but integration would be difficult"
+      placeholder: 'e.g., "Could manually send emails, but that is time-consuming", "Could use a separate system, but integration would be difficult"'
 
   - type: checkboxes
     id: acceptance-criteria

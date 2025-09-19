@@ -14,7 +14,7 @@ body:
     attributes:
       label: Activity Name
       description: What is the name of the new activity?
-      placeholder: e.g., "Robotics Club", "Spanish Language Club", "Photography Workshop"
+      placeholder: 'e.g., "Robotics Club", "Spanish Language Club", "Photography Workshop'
     validations:
       required: true
 
@@ -23,7 +23,7 @@ body:
     attributes:
       label: Activity Description
       description: Provide a detailed description of what this activity involves
-      placeholder: e.g., "Students will learn programming and build robots to compete in local competitions"
+      placeholder: 'e.g., "Students will learn programming and build robots to compete in local competitions'
     validations:
       required: true
 
@@ -48,7 +48,7 @@ body:
     attributes:
       label: Start Time
       description: What time should the activity start? (Use 24-hour format)
-      placeholder: e.g., "15:30" for 3:30 PM, "07:00" for 7:00 AM
+      placeholder: 'e.g., "15:30" for 3:30 PM, "07:00" for 7:00 AM'
     validations:
       required: true
 
@@ -57,7 +57,7 @@ body:
     attributes:
       label: End Time
       description: What time should the activity end? (Use 24-hour format)
-      placeholder: e.g., "17:00" for 5:00 PM, "08:30" for 8:30 AM
+      placeholder: 'e.g., "17:00" for 5:00 PM, "08:30" for 8:30 AM'
     validations:
       required: true
 
@@ -66,7 +66,7 @@ body:
     attributes:
       label: Maximum Participants
       description: How many students can participate in this activity?
-      placeholder: e.g., "20"
+      placeholder: 'e.g., "20'
     validations:
       required: true
 
@@ -75,7 +75,7 @@ body:
     attributes:
       label: Supervising Teacher
       description: Which teacher will supervise this activity?
-      placeholder: e.g., "Ms. Rodriguez", "Mr. Chen"
+      placeholder: 'e.g., "Ms. Rodriguez", "Mr. Chen'
     validations:
       required: true
 
@@ -84,7 +84,7 @@ body:
     attributes:
       label: Additional Requirements or Notes
       description: Any special equipment, room requirements, or other important details?
-      placeholder: e.g., "Requires computer lab access", "Need art supplies budget", "Outdoor space required"
+      placeholder: 'e.g., "Requires computer lab access", "Need art supplies budget", "Outdoor space required'
 
   - type: checkboxes
     id: acceptance-criteria
